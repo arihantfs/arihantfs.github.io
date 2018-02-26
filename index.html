@@ -247,10 +247,12 @@ window.addEvent('domready', function(){
                     if (jQuery(this).scrollTop() != 0) {
                             jQuery('#toTop').fadeIn();
                     } else {
-                            jQuery('#toTop').fadeOut();
+                            /*jQuery('#toTop').fadeOut();*/
                     }
             });
-            window.addEvent("domready",function(){var b=document.id("toTop");if(b){var a=new Fx.Scroll(window);b.setStyle("outline","none").addEvent("click",function(c){c.stop(); a.toTop();});}});
+            window.addEvent("domready",function(){
+                fadeIn();
+                var b=document.id("toTop");if(b){var a=new Fx.Scroll(window);b.setStyle("outline","none").addEvent("click",function(c){c.stop(); a.toTop();});}});
                     });
         
         var menuWidth = 0;
@@ -1329,6 +1331,8 @@ Message                     &nbsp;<span class="vis_mandatory">*</span>
         
 			        
     </div>
+    <div id="toTop"style="display: block;"><li class="icon-chevron-up">
+        <a href="google.navigation:q=28.667574,77.302495"></a> </li></div>
 	</body>
 </html>
 
